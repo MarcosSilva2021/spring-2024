@@ -3,6 +3,7 @@ package br.edu.unichristus.aulaSB1.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.unichristus.aulaSB1.service.CalculadoraService;
@@ -14,8 +15,8 @@ public class CalculadoraController {
 	@Autowired
 	CalculadoraService service;
 	
-	@GetMapping()
-	public double somar(double n1, double n2) {
+	@GetMapping("/somar")
+	public double somar(@RequestParam("num1") double n1, double n2) {
 		return service.somar(n1, n2);
 	}
 	
