@@ -18,12 +18,6 @@ public class CalculadoraService {
 	}
 	
 	public double div(double n1, double n2) {
-		double divisao = 0;
-		try {
-			divisao = n1/n2;
-		}catch(Exception ex) {
-			ex.printStackTrace();
-		}
 		return n1 / n2;
 	}
 
